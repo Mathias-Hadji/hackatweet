@@ -1,0 +1,26 @@
+.title {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+.containerHashtag {
+    padding: 50px;
+    border-bottom: 1px solid #c8c8c858;
+}
+
+.inputHashtag {
+    background: transparent;
+    width: 100%;
+    background: #1E2734;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+    color: #c5c5c5;
+    padding: 10px 10px;
+}
+
+.inputHashtag:focus {
+    outline: inherit; 
+}

@@ -1,0 +1,78 @@
+
+.loginContainer {
+    display: flex;
+    position: relative;
+}
+
+.leftSide {
+    height: 100vh;
+    width: 45%;
+    background-image: url('../public/twitterBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rightSide {
+    height: 100vh;
+    width: 55%;
+    background: #16202D;
+    padding: 25px;
+}
+
+.twitterLogo {
+    font-size: 50px;
+    color: #fff;
+    transform: rotate(-180deg);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.twitterLogo:hover {
+    transform: rotate(-0deg);
+}
+
+.title {
+    color: #fff;
+    font-size: 60px;
+    line-height: 1.4;
+}
+
+.callToActionMsg {
+    color: #fff;
+    font-size: 30px;
+}
+
+.btnGlobalStyle{
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 160px;
+    height: 35px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.signupBtn {
+    background: #409BF0;
+    color: #fff;
+}
+
+.signupBtn:hover {
+    background: #347dc2;
+}
+
+.signinBtn {
+    background: #16202D;
+    color: #409BF0;
+    border: 1px solid #a4a4a4;
+}
+
+.signinBtn:hover {
+    background: #5491cb1f;
+}
+
+.alreadyAccountLink {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}

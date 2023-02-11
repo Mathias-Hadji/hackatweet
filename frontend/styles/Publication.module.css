@@ -1,0 +1,70 @@
+.publicationContainer {
+    padding: 20px;
+    border-bottom: 1px solid #c8c8c858;
+    cursor: pointer;
+}
+
+.publicationContainer:hover {
+    background: #212d3c;
+}
+
+.headerPublication {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.profilePicPublication {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.publicationFirstName{
+    color: #fff;
+    font-weight: bold;
+}
+
+.publicationUserName {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgb(107, 127, 178); 
+}
+
+.publicationDate {
+    color: rgb(107, 127, 178); 
+}
+
+.publicationMessage {
+    color: #fff;
+}
+
+.footerMessage {
+    display: flex;
+    align-items: center;
+}
+
+.likeContainer {
+    margin-right: 15px;
+    color: #fff;
+}
+
+.heartIcon {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.heartIconLiked{
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.likeContainerLiked {
+    margin-right: 15px;
+    color: #FD177C;
+}
+
+.trashIcon{
+    color: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,87 @@
+.homeContainer {
+    background: #16202D;
+    height: 100%;
+    display: flex;
+    height: 100vh;
+}
+
+.leftSide {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 50px;
+    padding: 25px 0;
+}
+
+.twitterLogo {
+    font-size: 50px;
+    color: #fff;
+    transform: rotate(-180deg);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.twitterLogo:hover {
+    transform: rotate(-0);
+}
+
+.mainContent {
+    border-left: 1px solid #c8c8c858;
+    border-right: 1px solid #c8c8c858;
+    width: 50%;
+    overflow: scroll;
+}
+
+.rightSide {
+    width: 25%;
+}
+
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.profileWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.profilePic {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.profileName {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.profileUsername {
+    color: #ababab;
+}
+
+.btnLogout {
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 85px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.btnLogout:hover {
+    background: #00000048;
+}
+
+.inputTweet::placeholder {
+    font-family: sans-serif;
+    color: #7b7b7b;
+    font-size: 20px;
+}

@@ -1,0 +1,63 @@
+.title {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+.containerNewTweet {
+    padding: 50px;
+    border-bottom: 1px solid #c8c8c858;
+}
+
+.inputTweet {
+    background: transparent;
+    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.inputTweet::placeholder {
+    font-family: sans-serif;
+    color: #7b7b7b;
+    font-size: 20px;
+}
+
+.inputTweet:focus{
+    outline: inherit; 
+}
+
+.btnPublishTweet{
+    background: #409bf0;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    height: 30px;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnPublishTweet:hover {
+    background: #3581c9;
+}
+
+.footerForm {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.counterCharTweet{
+    color: #fff;
+    margin-right: 10px;
+}
+
+.counterCharTweetOver{
+    color: red;
+    margin-right: 10px;
+}

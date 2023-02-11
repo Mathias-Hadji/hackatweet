@@ -1,0 +1,79 @@
+.signUpContainer{
+    background-color: #0000008a;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.closeIcon {
+    position: absolute;
+    color: #fff;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.signUpCard{
+    background: #16202D;
+    height: 50vh;
+    width: 40vw;
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+    transform: translate(-50%, -75%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.twitterLogo {
+    font-size: 50px;
+    color: #fff;
+    transform: rotate(-180deg);
+}
+
+.title {
+    color: #fff;
+}
+
+.signupForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputForm {
+    background: transparent;
+    border: 1px solid #9d9d9d;
+    border-radius: 3px;
+    margin: 5px 0;
+    padding: 8px 7px;
+    color: #fff;
+    width: 200px;
+}
+
+.inputForm::placeholder{
+    color: #c5c5c5;
+}
+
+.inputForm:focus{
+    outline: inherit; 
+}
+
+.btnSignUp{
+    margin-top: 5px;
+    border-radius: 30px;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btnSignUp:hover {
+    background: #fff;
+}
