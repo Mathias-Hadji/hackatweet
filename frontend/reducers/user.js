@@ -1,31 +1,33 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: {
-    firstName: null,
-    userName: null,
-    token: null,
-  },
+    value: {
+        userId: "user ID",
+        firstName: "First Name",
+        userName: "Username",
+        token: null,
+    },
 };
 
 export const userSlice = createSlice({
-  name: "user",
+    name: "user",
 
-  initialState,
+    initialState,
 
-  reducers: {
-    updateUserData: (state, action) => {
-      console.log("payload", action.payload);
-      state.value.firstName = action.payload.firstName;
-      state.value.userName = action.payload.userName;
-      state.value.token = action.payload.token;
+    reducers: {
+        updateUserData: (state, action) => {
+            state.value.userId = action.payload.userId;
+            state.value.firstName = action.payload.firstName;
+            state.value.userName = action.payload.userName;
+            state.value.token = action.payload.token;
+        },
+        userLogout: (state, action) => {
+            state.value.userId = null;
+            state.value.firstName = null;
+            state.value.userName = null;
+            state.value.token = null;
+        },
     },
-    userLogout: (state) => {
-      state.value.firstName = null;
-      state.value.userName = null;
-      state.value.token = null;
-    },
-  },
 });
 
 export const { updateUserData, userLogout } = userSlice.actions;

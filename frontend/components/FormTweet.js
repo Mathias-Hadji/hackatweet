@@ -1,21 +1,27 @@
 import { useState } from "react";
 import styles from "../styles/FormTweet.module.css";
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { addNewPublication } from "../reducers/publications";
 
 export default function FormTweet() {
+    const dispatch = useDispatch();
     
-    const token = useSelector((state) => state.user.value.token);
+    const user = useSelector((state) => state.user.value);
 
     const [inputMessage, setInputMessage] = useState('');
+
+
 
     const handleCreatePublication = () => {
 
         if(inputMessage.length <= 280){
 
             const publication = {
-                token: token,
+                userId: user.userId,
                 message: inputMessage
+                // token: token,
             };
     
             fetch("http://localhost:3000/publications", {
@@ -25,7 +31,7 @@ export default function FormTweet() {
             })
                 .then((res) => res.json())
                 .then((data) => {
-                    console.log(data)
+                    dispatch(addNewPublication(data.publication))
                     setInputMessage('');
                 });
         }

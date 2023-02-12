@@ -31,7 +31,7 @@
     border-left: 1px solid #c8c8c858;
     border-right: 1px solid #c8c8c858;
     width: 50%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .rightSide {

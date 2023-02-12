@@ -13,13 +13,18 @@ export const publicationsSlice = createSlice({
 
     reducers: {
         getAllPublications: (state, action) => {
-            state.value.articles = action.payload
+            state.value.publications = action.payload;
         },
-        addArticle : (state, action) => {
-            state.value.articles = [action.payload, ...state.value.articles]
+
+        addNewPublication : (state, action) => {
+            state.value.publications = [action.payload, ...state.value.publications];
+        },
+
+        deletePublication: (state, action) => {
+            state.value.publications = state.value.publications.filter(publication => publication._id !== action.payload.publicationId);
         }
     },
 });
 
-export const { getAllPublications } = publicationsSlice.actions;
+export const { getAllPublications, addNewPublication,  deletePublication} = publicationsSlice.actions;
 export default publicationsSlice.reducer;
