@@ -22,8 +22,13 @@ export const loginModalsSlice = createSlice({
             state.value.signInModal = !state.value.signInModal;
             state.value.signUpModal = false;
         },
+
+        resetAllModalsToFalse: (state, action) => {
+            state.value.signInModal = false;
+            state.value.signUpModal = false;
+        }
     },
 });
 
-export const { toggleModalSignUp, toggleModalSignIn } = loginModalsSlice.actions;
+export const { toggleModalSignUp, toggleModalSignIn, resetAllModalsToFalse } = loginModalsSlice.actions;
 export default loginModalsSlice.reducer;

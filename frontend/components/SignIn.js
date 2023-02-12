@@ -10,6 +10,7 @@ import { useState } from "react";
 
 import { useRouter } from "next/router";
 import { updateUserData } from "../reducers/user";
+import { resetAllModalsToFalse } from "../reducers/loginModals";
 
 export default function SignIn() {
     const router = useRouter();
@@ -48,6 +49,8 @@ export default function SignIn() {
                             token: data.token,
                         })
                     );
+
+                    dispatch(resetAllModalsToFalse());
 
                     router.push("/home");
                 }

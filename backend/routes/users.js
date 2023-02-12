@@ -64,8 +64,10 @@ router.post("/signin", (req, res) => {
 });
 
 router.get("/:token", (req, res) => {
-    console.log("test");
-    User.findOne({ token: req.params.token }).then((user) => {
+
+    User.findOne({ token: req.params.token })
+    .then((user) => {
+
         if (user) {
             res.json({ firstName: user.firstName, userName: user.userName });
         } else {

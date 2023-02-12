@@ -5,8 +5,11 @@ import SignUp from "./SignUp";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModalSignUp, toggleModalSignIn } from "../reducers/loginModals";
 import SignIn from "./SignIn";
+import { useRouter } from "next/router";
 
 export default function LoginPage() {
+    const router = useRouter();
+
     const signUpModal = useSelector(
         (state) => state.loginModals.value.signUpModal
     );

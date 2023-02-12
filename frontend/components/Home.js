@@ -7,10 +7,11 @@ import TrendList from "./TrendList";
 import Hashtag from "./Hashtag";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import { getAllPublications } from "../reducers/publications";
 import { userLogout } from "../reducers/user";
-import { useRouter } from "next/router";
 
+import { useRouter } from "next/router";
 
 export default function Home() {
     const dispatch = useDispatch();

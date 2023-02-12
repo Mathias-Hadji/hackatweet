@@ -3,10 +3,13 @@ import styles from "../styles/SignUp.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { updateUserData } from "../reducers/user";
 
 import { useDispatch } from "react-redux";
+
+import { updateUserData } from "../reducers/user";
 import { toggleModalSignUp } from "../reducers/loginModals";
+import { resetAllModalsToFalse } from "../reducers/loginModals";
+
 import { useState } from "react";
 
 import { useRouter } from "next/router";
@@ -51,6 +54,7 @@ export default function Signup() {
                             token: data.token,
                         })
                     );
+                    dispatch(resetAllModalsToFalse());
                     router.push("/home");
                 }
             });
