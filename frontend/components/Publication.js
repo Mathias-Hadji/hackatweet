@@ -6,7 +6,8 @@ import { faHeart, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { deletePublication } from "../reducers/publications";
 
-import TimeAgo from "react-timeago";
+import moment from "moment";
+import 'moment/locale/fr';
 
 export default function Publication(props) {
 
@@ -21,13 +22,9 @@ export default function Publication(props) {
         })
         .then(res => res.json())
         .then(res => {
-            console.log(res);
             dispatch(deletePublication({publicationId: props.publicationId}));
         })
-
     }
-
-    const dateToFormat = '1976-04-19T12:59-0500';
 
     return (
         <>
@@ -45,8 +42,7 @@ export default function Publication(props) {
                         @{props.publicationUserName}
                     </p>
                     <p className={styles.publicationDate}>
-                        <span>-</span> {props.publicationDate}
-                        <TimeAgo date={dateToFormat} />
+                        <span>-</span> {moment(props.publicationDate).fromNow()}
                     </p>
                 </div>
                 <div className={styles.publicationMessage}>

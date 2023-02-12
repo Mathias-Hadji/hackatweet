@@ -11,6 +11,7 @@ import { getAllPublications } from "../reducers/publications";
 import { userLogout } from "../reducers/user";
 import { useRouter } from "next/router";
 
+
 export default function Home() {
     const dispatch = useDispatch();
 

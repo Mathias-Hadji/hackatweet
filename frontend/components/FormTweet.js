@@ -16,7 +16,7 @@ export default function FormTweet() {
 
     const handleCreatePublication = () => {
 
-        if(inputMessage.length <= 280){
+        if(inputMessage && inputMessage.length <= 280){
 
             const publication = {
                 userId: user.userId,

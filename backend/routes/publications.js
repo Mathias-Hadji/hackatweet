@@ -21,7 +21,6 @@ router.post("/", (req, res) => {
         Publications.findOne({ _id: publication._id })
         .populate('userId')
         .then((data) => {
-            console.log(data)
             res.json({ result: true, publication: data });
         });
     })
